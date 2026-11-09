@@ -1,0 +1,151 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a1c0247ada-layer-2",
+      "title": "NYPD police stations (Jan 2017)",
+      "url": "https://services1.arcgis.com/0mhlGDIUKwQF6tnJ/arcgis/rest/services/Police_Precincts_Jan2017/FeatureServer/0",
+      "itemId": "ee33ea78614447fe809693bcdcd18a0d",
+      "layerType": "ArcGISFeatureLayer",
+      "layerDefinition": {
+        "fieldConfigurations": [
+          {
+            "name": "Zip_Code",
+            "fieldFormat": {
+              "type": "number",
+              "minimumFractionDigits": 2,
+              "useGrouping": "always"
+            }
+          },
+          {
+            "name": "ID_1",
+            "fieldFormat": {
+              "type": "number",
+              "minimumFractionDigits": 2,
+              "useGrouping": "always"
+            }
+          },
+          {
+            "alias": "Website",
+            "name": "Website_1"
+          }
+        ]
+      },
+      "popupInfo": {
+        "popupElements": [
+          {
+            "type": "fields",
+            "fieldInfos": [
+              {
+                "fieldName": "Precinct",
+                "isEditable": true,
+                "label": "Precinct",
+                "visible": true
+              },
+              {
+                "fieldName": "Address",
+                "isEditable": true,
+                "label": "Address",
+                "visible": true
+              },
+              {
+                "fieldName": "Telephone",
+                "isEditable": true,
+                "label": "Telephone",
+                "visible": true
+              },
+              {
+                "fieldName": "Zip_Code",
+                "isEditable": true,
+                "label": "Zip_Code",
+                "visible": true
+              },
+              {
+                "fieldName": "Type",
+                "isEditable": true,
+                "label": "Type",
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "fieldInfos": [
+          {
+            "fieldName": "Precinct",
+            "isEditable": true,
+            "label": "Precinct",
+            "visible": true
+          },
+          {
+            "fieldName": "Address",
+            "isEditable": true,
+            "label": "Address",
+            "visible": true
+          },
+          {
+            "fieldName": "Telephone",
+            "isEditable": true,
+            "label": "Telephone",
+            "visible": true
+          },
+          {
+            "fieldName": "Zip_Code",
+            "isEditable": true,
+            "label": "Zip_Code",
+            "visible": true
+          },
+          {
+            "fieldName": "Type",
+            "isEditable": true,
+            "label": "Type",
+            "visible": true
+          }
+        ],
+        "title": "{Precinct} precinct station"
+      }
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "gray-base-layer",
+        "opacity": 1,
+        "title": "Light Gray Base",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/291da5eab3a0412593b66d384379f89f/resources/styles/root.json"
+      },
+      {
+        "id": "gray-reference-layer",
+        "opacity": 1,
+        "title": "Light Gray Reference",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/1768e8369a214dfab4e2167d5c5f2454/resources/styles/root.json",
+        "isReference": true
+      }
+    ],
+    "title": "Light Gray Canvas"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -8265615.08984798,
+        "ymin": 4940609.6883633165,
+        "xmax": -8208076.392904432,
+        "ymax": 4995755.975601242
+      }
+    }
+  }
+}

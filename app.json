@@ -1,0 +1,189 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-11-09T11:48:59.877Z",
+  "item": {
+    "title": "NYC Police Response Coverage",
+    "subtitle": "Select a station to generate a 10-minute drive-time service area."
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "analysis",
+    "showHeader": true,
+    "theme": {
+      "mode": "light",
+      "accent": "default",
+      "design": {
+        "schemaVersion": 1,
+        "id": "government-security",
+        "name": "Government Security",
+        "source": {
+          "kind": "built-in"
+        },
+        "sourceSha256": "55b077b44d6d4032642ebe83965ac6b5e3f7da9ce86422a254684c5653730ef4",
+        "guidance": "# Government Security\n\n## Overview\n\nFor public agencies that manage sites, patrols, duty rosters and protected areas, and report on them to others. The reader needs an ordered, trustworthy account: what is covered, what has been done and what comes next. The page feels formal, steady and exact, and the map stays the primary reading surface.\n\n## Colors\n\nCool gray-blue surfaces and one clear institutional blue. Blue is the page's baseline: navigation, the primary action, the default selection and small accents all use it. It never stands in for an alert. A security incident or violation uses the status colors, which outrank blue wherever both appear.\n\nKeep blue light on the map: large highlighted areas in strong blue hide the basemap, so polygons take a low opacity. A chart whose values carry a meaning sets `colors`; other charts may use the accent.\n\n## Typography\n\nA neutral, widely installed sans gives official documents their plain, formal tone. Body text is comfortable to read in full sentences and titles are short. Distinguish routine duty notices from security alerts in the wording itself. Avoid fragments of technical language: \"12 of 14 patrols are complete\", not \"Patrol 12/14\". Content a behavior draws inherits the page's font and size.\n\n## Layout\n\nCompact spacing shows more of the record without crowding a block. First show the totals, such as sites, tasks and protected areas, then a list, and then the details of the selected item below it: its records, documents and linked items. Use one side panel unless a second has a job the first cannot hold.\n\n## Elevation & Depth\n\nThe page is flat, with depth from the step between background, surface and raised surface and thin borders. Floating panels stay almost opaque, so text keeps its formal clarity over any basemap.\n\n## Shapes\n\nCorners are small and consistent on panels, blocks and controls, as befits a formal record. Chips stay fully round so they read as chips.\n\n## Components\n\n- **KPI:** the totals the reader reports, with the period each one covers.\n- **List and table:** a list for finding one site or task; a table when the reader compares fields or copies them into a report.\n- **Stat:** progress against a stated target, such as patrols completed.\n- **Selector:** a dropdown or chips for district, status or period.\n- **Report:** a short written account when the reader must hand on a conclusion.\n- **Buttons:** one primary action in a panel, with a label such as \"Verify site\" or \"Assign task\".\n- **Empty state:** say what was checked and what was found.\n\n## Map\n\n`gray-vector` and `dark-gray-vector` keep sites and areas clear. Protected areas use a low-opacity fill with a firm outline, in a layer the reader can hide. Graded point and area colors carry meaning and are never decoration. A `legend` widget stays short, with few classes and plenty of room.\n\n## Do's and Don'ts\n\n- Do use complete, formal sentences.\n- Do separate routine notices from alerts, in both words and color.\n- Do show the period and the source behind each total.\n- Don't use blue to signal an incident or a violation.\n- Don't cover the basemap with large, strong highlights.\n- Don't add decorative figures, banners or animation.",
+        "tokens": {
+          "light": {
+            "background": "#ecf0f1",
+            "surface": "#ffffff",
+            "surfaceRaised": "#e2eced",
+            "foreground": "#1e2d2b",
+            "foregroundMuted": "#4c635f",
+            "border": "#ced9d4",
+            "accent": "#196cf4",
+            "accentHover": "#155ccf",
+            "accentActive": "#124cab"
+          },
+          "dark": {
+            "background": "#131e32",
+            "surface": "#182238",
+            "surfaceRaised": "#22324e",
+            "foreground": "#e8eef9",
+            "foregroundMuted": "#a9b5c9",
+            "border": "#34435b",
+            "accent": "#3b82f6",
+            "accentHover": "#5391f7",
+            "accentActive": "#6aa0f8"
+          },
+          "typography": {
+            "fontFamily": "Arial, \"Helvetica Neue\", \"Microsoft YaHei\", \"PingFang SC\", sans-serif",
+            "bodySize": 14,
+            "headingSize": 16,
+            "titleSize": 24,
+            "lineHeight": 1.5
+          },
+          "spacing": {
+            "gap": 10,
+            "padding": 16
+          },
+          "radius": 4,
+          "overlay": {
+            "opacity": 0.94,
+            "blur": 10
+          },
+          "chart": {
+            "light": [
+              "#196cf4",
+              "#c4641a",
+              "#0f8a84",
+              "#c2417c",
+              "#9a7d0a",
+              "#5f7694",
+              "#3f8f3f",
+              "#8a5a3c"
+            ],
+            "dark": [
+              "#3b82f6",
+              "#6cbf5c",
+              "#e0699c",
+              "#d4b106",
+              "#8fa3bf",
+              "#e8912e",
+              "#2fb8ad",
+              "#c49a7a"
+            ]
+          }
+        }
+      }
+    },
+    "layout": {
+      "right": {
+        "hidden": false,
+        "width": "390px",
+        "title": "Station search & coverage",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "coverage-control",
+            "title": "Select a police station"
+          }
+        ]
+      }
+    },
+    "layoutMode": "docked",
+    "widgets": [
+      {
+        "id": "legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "station-service-area",
+        "label": "Station search and 10-minute drive-time coverage",
+        "bundlePath": "./runtime/behaviors/station-service-area-955ef8e802086a50.js",
+        "sourceSha256": "955ef8e802086a509992ee0c959d5a8194a6e2025927fa99c6aa65cac95adeae",
+        "modulePaths": [
+          "esri/Graphic",
+          "esri/portal/Portal",
+          "esri/rest/networkService",
+          "esri/rest/serviceArea",
+          "esri/rest/support/FeatureSet",
+          "esri/rest/support/ServiceAreaParameters"
+        ],
+        "config": {
+          "stationLayerId": "1a1c0247ada-layer-2",
+          "minutes": 10
+        },
+        "mounts": [
+          "coverage-control"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [
+          {
+            "id": "station-map-click",
+            "trigger": {
+              "type": "feature-click",
+              "layerId": "1a1c0247ada-layer-2"
+            },
+            "actionId": "select-station"
+          }
+        ],
+        "installedAt": "2026-11-09T11:50:09.625Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "b91cd878-20a9-47cb-a8cb-565c89e0de23",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-340097cc-1892-44b9-8d9c-807431a0f39c",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-11-09T11:48:59.875Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}

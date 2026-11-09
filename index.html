@@ -1,1 +1,106 @@
-<!doctype html><meta charset="utf-8"><title>ArcGIS Nova</title>
+<!doctype html>
+<html lang="en" data-theme="light" data-accent="default" data-design>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ArcGIS Nova app</title>
+    <script src="./locale.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/5.1.3/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="./app.css" />
+    <style id="app-design">
+:root[data-design] .calcite-mode-light {
+  --calcite-color-background: #ecf0f1;
+  --calcite-color-foreground-1: #ffffff;
+  --calcite-color-foreground-2: #e2eced;
+  --calcite-color-text-1: #1e2d2b;
+  --calcite-color-text-2: #4c635f;
+  --calcite-color-border-1: #ced9d4;
+  --calcite-color-brand: #196cf4;
+  --calcite-color-brand-hover: #155ccf;
+  --calcite-color-brand-press: #124cab;
+  --calcite-color-foreground-3: color-mix(in srgb, var(--calcite-color-foreground-2) 95%, var(--calcite-color-text-1));
+  --calcite-color-text-3: color-mix(in srgb, var(--calcite-color-text-2) 85%, var(--calcite-color-foreground-1));
+  --calcite-color-border-2: color-mix(in srgb, var(--calcite-color-border-1) 75%, var(--calcite-color-foreground-1));
+  --calcite-color-border-3: color-mix(in srgb, var(--calcite-color-border-1) 50%, var(--calcite-color-foreground-1));
+  --calcite-color-border-input: color-mix(in srgb, var(--calcite-color-border-1) 60%, var(--calcite-color-text-1));
+  --app-series-1: #196cf4;
+  --app-series-2: #c4641a;
+  --app-series-3: #0f8a84;
+  --app-series-4: #c2417c;
+  --app-series-5: #9a7d0a;
+  --app-series-6: #5f7694;
+  --app-series-7: #3f8f3f;
+  --app-series-8: #8a5a3c;
+}
+:root[data-design] .calcite-mode-dark {
+  --calcite-color-background: #131e32;
+  --calcite-color-foreground-1: #182238;
+  --calcite-color-foreground-2: #22324e;
+  --calcite-color-text-1: #e8eef9;
+  --calcite-color-text-2: #a9b5c9;
+  --calcite-color-border-1: #34435b;
+  --calcite-color-brand: #3b82f6;
+  --calcite-color-brand-hover: #5391f7;
+  --calcite-color-brand-press: #6aa0f8;
+  --calcite-color-foreground-3: color-mix(in srgb, var(--calcite-color-foreground-2) 95%, var(--calcite-color-text-1));
+  --calcite-color-text-3: color-mix(in srgb, var(--calcite-color-text-2) 85%, var(--calcite-color-foreground-1));
+  --calcite-color-border-2: color-mix(in srgb, var(--calcite-color-border-1) 75%, var(--calcite-color-foreground-1));
+  --calcite-color-border-3: color-mix(in srgb, var(--calcite-color-border-1) 50%, var(--calcite-color-foreground-1));
+  --calcite-color-border-input: color-mix(in srgb, var(--calcite-color-border-1) 60%, var(--calcite-color-text-1));
+  --app-series-1: #3b82f6;
+  --app-series-2: #6cbf5c;
+  --app-series-3: #e0699c;
+  --app-series-4: #d4b106;
+  --app-series-5: #8fa3bf;
+  --app-series-6: #e8912e;
+  --app-series-7: #2fb8ad;
+  --app-series-8: #c49a7a;
+}
+:root[data-design] {
+  --app-font: Arial, "Helvetica Neue", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --app-heading-size: 16px;
+  --app-gap: 10px;
+  --app-pad: 16px;
+  --app-radius: 4px;
+  --app-overlay-opacity: 0.94;
+  --app-overlay-blur: 10px;
+  --app-control-radius: 4px;
+  --app-block-pad: 16px;
+  --app-type-scale: 1.0769;
+}
+:root[data-design] .app-block {
+  --calcite-font-line-height-relative-snug: 1.5;
+}
+:root[data-design] body {
+  --calcite-font-family: Arial, "Helvetica Neue", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+:root[data-design] #app-title {
+  font-size: min(24px, 8vw);
+}
+:root[data-design] .app-region-title,
+:root[data-design] .app-block-title {
+  font-size: 16px;
+}
+    </style>
+  </head>
+  <body class="calcite-mode-light">
+    <header class="app-header" id="app-header" hidden>
+      <div class="app-identity">
+        <h1 id="app-title"></h1>
+        <p id="app-subtitle" hidden></p>
+      </div>
+      <section class="app-region app-region-header" id="app-region-header" hidden></section>
+    </header>
+    <main class="app-main">
+      <aside class="app-region app-region-left" id="app-region-left" hidden></aside>
+      <div id="app-view"></div>
+      <aside class="app-region app-region-right" id="app-region-right" hidden></aside>
+    </main>
+    <footer class="app-region app-region-footer" id="app-region-footer" hidden></footer>
+    <p id="app-error" hidden></p>
+    <script type="module" src="https://js.arcgis.com/5.1.3/"></script>
+    <script type="module" src="./standalone-auth.js"></script>
+  </body>
+</html>
